@@ -2,116 +2,583 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Mohammed Rishan Suheeb | AI & Data Science</title>
 
     <meta name="description"
-          content="Official personal website of Mohammed Rishan Suheeb, engineering student, technology enthusiast and entrepreneur.">
+          content="Official website of Mohammed Rishan Suheeb, an engineering student interested in Artificial Intelligence, Data Science, technology and innovation.">
 
     <meta name="author"
           content="Mohammed Rishan Suheeb">
+
+    <meta name="keywords"
+          content="Mohammed Rishan Suheeb, AI, Data Science, Engineering Student, Technology, Innovation">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080b12;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(8, 11, 18, 0.95);
+            border-bottom: 1px solid #222936;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #00e5ff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+            background:
+                radial-gradient(circle at top right,
+                #123044 0%,
+                #080b12 45%);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .small-title {
+            color: #00e5ff;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 85px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00e5ff;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #b7c0cc;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #00e5ff;
+        }
+
+        .primary {
+            background: #00e5ff;
+            color: #061018;
+        }
+
+        .secondary {
+            color: #ffffff;
+            background: transparent;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .section-line {
+            width: 60px;
+            height: 4px;
+            background: #00e5ff;
+            margin-bottom: 35px;
+        }
+
+        .section-text {
+            max-width: 850px;
+            color: #b7c0cc;
+            font-size: 17px;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+            margin-top: 35px;
+        }
+
+        .card {
+            background: #10151f;
+            border: 1px solid #222936;
+            border-radius: 15px;
+            padding: 28px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: #00e5ff;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #00e5ff;
+        }
+
+        .card p {
+            color: #b7c0cc;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .skill {
+            padding: 10px 18px;
+            background: #10151f;
+            border: 1px solid #28303d;
+            border-radius: 30px;
+            color: #dce4ee;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            background: #10151f;
+            border: 1px solid #222936;
+            border-radius: 15px;
+            padding: 35px;
+            max-width: 800px;
+        }
+
+        .contact-box p {
+            color: #b7c0cc;
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #222936;
+            color: #8792a2;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 6%;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Mohammed Rishan Suheeb</h1>
+    <!-- NAVIGATION -->
 
-        <p>
-            Engineering Student | AI & Data Science |
-            Technology & Entrepreneurship
-        </p>
+    <nav>
+
+        <div class="logo">
+            Mohammed <span>Rishan</span>
+        </div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                ENGINEERING • AI • INNOVATION
+            </div>
+
+            <h1>
+                Mohammed Rishan
+                <span>Suheeb</span>
+            </h1>
+
+            <p>
+                Engineering student passionate about
+                Artificial Intelligence, Data Science,
+                technology and building solutions for
+                real-world problems.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects"
+                   class="btn primary">
+                    Explore My Projects
+                </a>
+
+                <a href="#contact"
+                   class="btn secondary">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
     </header>
 
-    <main>
 
-        <section id="about">
-            <h2>About Me</h2>
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="section-text">
+            I am Mohammed Rishan Suheeb, an engineering
+            student interested in Artificial Intelligence,
+            Data Science, software development and
+            technological innovation.
+
+            <br><br>
+
+            I enjoy identifying real-world problems and
+            developing practical technology-based
+            solutions that can create meaningful impact.
+        </p>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+        <div class="section-line"></div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    Bachelor of Engineering
+                </h3>
+
+                <p>
+                    Artificial Intelligence &
+                    Data Science
+                </p>
+
+                <p>
+                    Engineering Student
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="section-title">
+            Skills & Interests
+        </h2>
+
+        <div class="section-line"></div>
+
+        <div class="skills">
+
+            <div class="skill">
+                Artificial Intelligence
+            </div>
+
+            <div class="skill">
+                Data Science
+            </div>
+
+            <div class="skill">
+                Python
+            </div>
+
+            <div class="skill">
+                Web Development
+            </div>
+
+            <div class="skill">
+                Problem Solving
+            </div>
+
+            <div class="skill">
+                Innovation
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            Projects
+        </h2>
+
+        <div class="section-line"></div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    NEERKAVACH
+                </h3>
+
+                <p>
+                    A smart agriculture concept focused
+                    on helping farmers make better
+                    irrigation and water-use decisions.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    LABELGUARD
+                </h3>
+
+                <p>
+                    A technology project focused on
+                    automated label analysis and
+                    verification.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    More Projects
+                </h3>
+
+                <p>
+                    New engineering, AI and technology
+                    projects will be added here as they
+                    are developed.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+<section id="contact">
+
+    <h2 class="section-title">
+        Contact Me
+    </h2>
+
+    <div class="section-line"></div>
+
+    <div class="contact-box">
+
+        <p>
+            Want to connect, collaborate or discuss a project?
+            Feel free to contact me.
+        </p>
+
+        <p>
+            📱 <strong>Mobile:</strong>
+            <a href="tel:+919483560913"
+               style="color:#00e5ff;">
+                +91 94835 60913
+            </a>
+        </p>
+
+        <p>
+            💬 <strong>WhatsApp:</strong>
+            <a href="https://wa.me/919483560913"
+               target="_blank"
+               style="color:#00e5ff;">
+                Chat with me on WhatsApp
+            </a>
+        </p>
+
+        <p>
+            ✉️ <strong>Email:</strong>
+            <a href="mailto:mohammedsuheeb07@gmail.com"
+               style="color:#00e5ff;">
+                mohammedsuheeb07@gmail.com
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            Contact
+        </h2>
+
+        <div class="section-line"></div>
+
+        <div class="contact-box">
 
             <p>
-                Welcome to my official personal website.
-                I am an engineering student interested in
-                Artificial Intelligence, Data Science,
-                technology and innovation.
-            </p>
-        </section>
-
-
-        <section id="education">
-            <h2>Education</h2>
-
-            <p>
-                Bachelor of Engineering
+                Interested in technology,
+                innovation and collaboration?
             </p>
 
             <p>
-                Artificial Intelligence & Data Science
-            </p>
-        </section>
-
-
-        <section id="skills">
-            <h2>Skills</h2>
-
-            <ul>
-                <li>Artificial Intelligence</li>
-                <li>Data Science</li>
-                <li>Python</li>
-                <li>Web Development</li>
-                <li>Problem Solving</li>
-            </ul>
-        </section>
-
-
-        <section id="projects">
-            <h2>Projects</h2>
-
-            <h3>NEERKAVACH</h3>
-
-            <p>
-                A smart agriculture project designed to
-                help farmers make better decisions about
-                irrigation and water usage.
+                More contact and social links will
+                be added here.
             </p>
 
+        </div>
 
-            <h3>LABELGUARD</h3>
-
-            <p>
-                A technology project focused on
-                automated label analysis and verification.
-            </p>
-
-        </section>
+    </section>
 
 
-        <section id="achievements">
-            <h2>Achievements</h2>
-
-            <p>
-                Hackathons, engineering projects,
-                competitions and technology activities.
-            </p>
-        </section>
-
-
-        <section id="contact">
-            <h2>Contact</h2>
-
-            <p>
-                Email:
-                your-email@example.com
-            </p>
-        </section>
-
-    </main>
+    <!-- FOOTER -->
 
     <footer>
 
         <p>
             © 2026 Mohammed Rishan Suheeb
-            All rights reserved.
+        </p>
+
+        <p>
+            Personal Portfolio
         </p>
 
     </footer>
